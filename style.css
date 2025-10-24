@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+    --paragraph: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--stone-100);
+    color: var(--stone-600)
+}
+
+main.card {
+    background: var(--white);
+    margin: auto;
+    max-width: 700px;
+    border-radius: 1.25rem;
+}
+
+main.card .img-cap {
+    position: relative;
+    overflow: hidden;
+}
+
+main.card img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+main.card .content {
+    padding: 36px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content .head-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.content .head-content h2 {
+    font-family: 'Young Serif', serif;
+    font-size: 30px;
+    line-height: 1.1;
+    color: var(--stone-600);
+}
+
+.content .head-content p {
+    font-size: var(--paragraph);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.5rem;
+    color: var(--stone-600);
+}
+
+.content .preparation-time {
+    font-family: 'Outfit', sans-serif;
+    background: var(--rose-50);
+    border-radius: 12px;
+    padding: 24px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.content .preparation-time h4 {
+    display: block;
+    color: var(--rose-800);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.content .preparation-time .list-item {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    column-gap: 2rem;
+    align-items: center;
+    color: var(--rose-800);
+    line-height: 1.5rem;
+}
+
+.content .preparation-time .list-item div {
+    color: var(--stone-600);
+}
+
+.content .preparation-time .list-item div span {
+    font-weight: 700;
+    color: var(--stone-600);
+}
+
+.content .second-head {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.content .second-head h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--brown-800);
+    font-family: 'Young Serif', sans-serif;
+}
+
+.content .second-head .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.content .second-head .list .list-item {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    column-gap: 2rem;
+    line-height: 1.5rem;
+}
+
+.content .second-head .list .list-item svg {
+    color: var(--brown-800);
+}
+
+.content .third-head {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.content .third-head h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--brown-800);
+    font-family: 'Young Serif', sans-serif;
+}
+
+.content .third-head .list {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    font-family: 'Outfit', sans-serif;
+    color: var(--stone-600);
+}
+
+.content .third-head .list .list-item {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: start;
+    column-gap: 2rem;
+    line-height: 1.5rem;
+}
+
+.content .third-head .list .list-item>div:first-child {
+    font-weight: 700;
+    color: var(--brown-800);
+}
+
+.content .third-head .list .list-item div span {
+    font-weight: 700;
+}
+
+.content .fourth-head {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.content .fourth-head h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--brown-800);
+    font-family: 'Young Serif', sans-serif;
+}
+
+.content .fourth-head p {
+    font-size: var(--paragraph);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.5rem;
+    color: var(--stone-600);
+}
+
+.content .table {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.content .table .label {
+    padding-block: .5rem;
+    padding-inline: 1rem;
+    border-bottom: 1px solid var(--stone-100);
+    color: var(--stone-600);
+}
+
+.content .table .value {
+    padding-block: .5rem;
+    border-bottom: 1px solid var(--stone-100);
+    font-weight: 600;
+    color: var(--brown-800);
+}
+
+.content .table .fat,
+.content .table .fat-value {
+    border: 0;
+}
+
+.attribution {
+    position: absolute;
+    color: var(--stone-600);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    padding-inline: 1rem;
+    padding-top: .25rem;
+    padding-bottom: .5rem;
+    white-space: space;
+    background-color: var(--white);
+    backdrop-filter: blur(2px);
+    border-bottom-left-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--stone-900);
+    font-weight: 500;
+    font-family: 'Outfit', monospace;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--stone-100);
+}
+
+@media (min-width: 700px) {
+    main.card {
+        margin-block: 6rem;
+    }
+
+    main.card .img-cap {
+        padding: 36px 30px 0 30px;
+    }
+
+    main.card .img-cap img {
+        border-radius: .75rem;
+    }
+
+    .attribution {
+        width: auto;
+        inset-inline: 30px;
+        top: 36px;
+        border-radius: .75rem;
+        transform: translateX(0);
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .4);
+        backdrop-filter: blur(2px);
+        color: var(--white);
+        pointer-events: none;
+        opacity: 0;
+    }
+
+    .attribution a {
+        color: var(--rose-50);
+    }
+
+    main.card .img-cap:hover .attribution {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
