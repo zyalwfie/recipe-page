@@ -73,18 +73,18 @@ body {
 }
 
 .main__attribution {
-    opacity: 0;
-    position: absolute;
+    font-family: 'Outfit';
+    font-size: clamp(.75rem, .5rem + 1dvh, 1rem);
+    position: fixed;
+    z-index: 10;
     color: var(--stone-600);
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: max-content;
-    padding-inline: 1rem;
-    padding-top: .25rem;
-    padding-bottom: .5rem;
-    white-space: space;
-    background-color: var(--white);
+    background-color: var(--stone-100);
+    padding-inline: .75rem;
+    padding-block: .25rem;
     backdrop-filter: blur(2px);
     border-bottom-left-radius: .75rem;
     border-bottom-right-radius: .75rem;
@@ -330,9 +330,10 @@ hr {
         padding-inline: 2.5rem;
     }
 
-    .attribution {
+    .main__attribution {
         width: auto;
-        inset-inline: 30px;
+        position: absolute;
+        inset-inline: 2.5rem;
         top: 36px;
         border-radius: .75rem;
         transform: translateX(0);
@@ -344,11 +345,12 @@ hr {
         opacity: 0;
     }
 
-    .attribution a {
+    .main__attribution a {
+        font-weight: 600;
         color: var(--rose-50);
     }
 
-    main.card .img-cap:hover .attribution {
+    .main__header:hover .main__attribution {
         opacity: 1;
         pointer-events: auto;
     }
