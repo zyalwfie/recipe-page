@@ -1,4 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+@import url('reset.css');
+
+/* outfit-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/outfit-v15-latin-regular.woff2') format('woff2');
+}
+
+/* outfit-600 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    src: url('assets/fonts/outfit-v15-latin-600.woff2') format('woff2');
+}
+
+/* outfit-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    src: url('assets/fonts/outfit-v15-latin-700.woff2') format('woff2');
+}
+
+/* young-serif-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Young Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/young-serif-v2-latin-regular.woff2') format('woff2');
+}
 
 :root {
     --white: hsl(0, 0%, 100%);
@@ -9,217 +45,35 @@
     --brown-800: hsl(14, 45%, 36%);
     --rose-800: hsl(332, 51%, 32%);
     --rose-50: hsl(330, 100%, 98%);
-    --paragraph: 16px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --paragraph: 1rem;
 }
 
 body {
     background-color: var(--stone-100);
-    color: var(--stone-600)
+    color: var(--stone-600);
 }
 
-main.card {
+.main {
     background: var(--white);
     margin: auto;
-    max-width: 700px;
-    border-radius: 1.25rem;
+    max-width: 375px;
+    overflow: hidden;
 }
 
-main.card .img-cap {
+.main__header {
     position: relative;
     overflow: hidden;
 }
 
-main.card img {
+.main__image {
     width: 100%;
+    height: 171px;
     object-fit: cover;
     object-position: center;
 }
 
-main.card .content {
-    padding: 36px 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.content .head-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.content .head-content h2 {
-    font-family: 'Young Serif', serif;
-    font-size: 30px;
-    line-height: 1.1;
-    color: var(--stone-600);
-}
-
-.content .head-content p {
-    font-size: var(--paragraph);
-    font-family: 'Outfit', sans-serif;
-    line-height: 1.5rem;
-    color: var(--stone-600);
-}
-
-.content .preparation-time {
-    font-family: 'Outfit', sans-serif;
-    background: var(--rose-50);
-    border-radius: 12px;
-    padding: 24px 30px;
-    display: flex;
-    flex-direction: column;
-    gap: .75rem;
-}
-
-.content .preparation-time h4 {
-    display: block;
-    color: var(--rose-800);
-    font-weight: 700;
-    font-size: 18px;
-}
-
-.content .preparation-time .list-item {
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    column-gap: 2rem;
-    align-items: center;
-    color: var(--rose-800);
-    line-height: 1.5rem;
-}
-
-.content .preparation-time .list-item div {
-    color: var(--stone-600);
-}
-
-.content .preparation-time .list-item div span {
-    font-weight: 700;
-    color: var(--stone-600);
-}
-
-.content .second-head {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.content .second-head h3 {
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--brown-800);
-    font-family: 'Young Serif', sans-serif;
-}
-
-.content .second-head .list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    font-family: 'Outfit', sans-serif;
-}
-
-.content .second-head .list .list-item {
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    align-items: center;
-    column-gap: 2rem;
-    line-height: 1.5rem;
-}
-
-.content .second-head .list .list-item svg {
-    color: var(--brown-800);
-}
-
-.content .third-head {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.content .third-head h3 {
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--brown-800);
-    font-family: 'Young Serif', sans-serif;
-}
-
-.content .third-head .list {
-    display: flex;
-    flex-direction: column;
-    gap: .75rem;
-    font-family: 'Outfit', sans-serif;
-    color: var(--stone-600);
-}
-
-.content .third-head .list .list-item {
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    align-items: start;
-    column-gap: 2rem;
-    line-height: 1.5rem;
-}
-
-.content .third-head .list .list-item>div:first-child {
-    font-weight: 700;
-    color: var(--brown-800);
-}
-
-.content .third-head .list .list-item div span {
-    font-weight: 700;
-}
-
-.content .fourth-head {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.content .fourth-head h3 {
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--brown-800);
-    font-family: 'Young Serif', sans-serif;
-}
-
-.content .fourth-head p {
-    font-size: var(--paragraph);
-    font-family: 'Outfit', sans-serif;
-    line-height: 1.5rem;
-    color: var(--stone-600);
-}
-
-.content .table {
-    font-family: 'Outfit', sans-serif;
-    line-height: 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.content .table .label {
-    padding-block: .5rem;
-    padding-inline: 1rem;
-    border-bottom: 1px solid var(--stone-100);
-    color: var(--stone-600);
-}
-
-.content .table .value {
-    padding-block: .5rem;
-    border-bottom: 1px solid var(--stone-100);
-    font-weight: 600;
-    color: var(--brown-800);
-}
-
-.content .table .fat,
-.content .table .fat-value {
-    border: 0;
-}
-
-.attribution {
+.main__attribution {
+    opacity: 0;
     position: absolute;
     color: var(--stone-600);
     top: 0;
@@ -240,7 +94,7 @@ main.card .content {
     transition: .2s ease;
 }
 
-.attribution a {
+.main__attribution a {
     text-decoration: none;
     color: var(--stone-900);
     font-weight: 500;
@@ -248,22 +102,232 @@ main.card .content {
     transition: cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
+.card {
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card__title {
+    font-family: 'Young Serif', serif;
+    font-size: 2.25rem;
+    line-height: 1;
+    color: var(--stone-900);
+}
+
+.card__description {
+    font-size: var(--paragraph);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.5rem;
+    color: var(--stone-600);
+}
+
+.preparation {
+    font-family: 'Outfit';
+    background: var(--rose-50);
+    border-radius: var(--paragraph);
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.preparation__title {
+    color: var(--rose-800);
+    font-size: 1.25rem;
+}
+
+.preparation__ul {
+    list-style: none;
+    padding-left: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.preparation__list {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.preparation__list::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.25rem;
+    height: 0.25rem;
+    background-color: var(--rose-800);
+    border-radius: 50%;
+}
+
+.preparation__list span {
+    font-weight: 600;
+}
+
+.ingredients {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    font-family: 'Outfit';
+    font-weight: 400;
+}
+
+.ingredients__title {
+    font-family: 'Young Serif', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--brown-800);
+}
+
+.ingredients__ul {
+    list-style: none;
+    padding-left: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.ingredients__list {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.ingredients__list::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.25rem;
+    height: 0.25rem;
+    background-color: var(--rose-800);
+    border-radius: 50%;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    font-family: 'Outfit';
+    font-weight: 400;
+}
+
+.instructions__title {
+    font-family: 'Young Serif', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--brown-800);
+}
+
+.instructions__ol {
+    list-style: none;
+    counter-reset: step;
+    padding-left: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.instructions__list {
+    counter-increment: step;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.instructions__list::before {
+    content: counter(step) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    color: var(--rose-800);
+}
+
+.instructions__item span {
+    font-weight: 600;
+}
+
+.nutrition {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    font-family: 'Outfit';
+    font-weight: 400;
+}
+
+.nutrition__title {
+    font-family: 'Young Serif', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--brown-800);
+}
+
+.nutrition__description {
+    font-size: var(--paragraph);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.5rem;
+    color: var(--stone-600);
+}
+
+.nutrition__table {
+    border-collapse: collapse;
+}
+
+.nutrition__table tr {
+    border-bottom: 1px solid var(--stone-100);
+}
+
+.nutrition__table tr:last-child {
+    border: none;
+}
+
+.nutrition__table tr td {
+    padding-block: .75rem;
+}
+
+.nutrition__table tr td:first-child {
+    padding-left: 1.75rem;
+}
+
+.nutrition__table tr td:last-child {
+    padding-inline: 1rem;
+    font-weight: 600;
+    color: var(--brown-800);
+}
+
 hr {
     border: 0;
     border-top: 1px solid var(--stone-100);
 }
 
-@media (min-width: 700px) {
-    main.card {
-        margin-block: 6rem;
+@media (min-width: 768px) {
+    .main {
+        margin-block: 7.75rem;
+        max-width: 738px;
+        border-radius: 1.25rem;
     }
 
-    main.card .img-cap {
-        padding: 36px 30px 0 30px;
+    .main__header {
+        padding-inline: 2.5rem;
+        padding-top: 2.5rem;
     }
 
-    main.card .img-cap img {
+    .main__image {
         border-radius: .75rem;
+        height: auto;
+    }
+
+    .card {
+        padding-inline: 2.5rem;
     }
 
     .attribution {

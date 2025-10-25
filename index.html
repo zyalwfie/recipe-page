@@ -10,234 +10,219 @@
 			sizes="32x32"
 			href="./assets/images/favicon-32x32.png"
 		/>
+
+		<link
+			rel="preload"
+			href="assets/fonts/outfit-v15-latin-regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="assets/fonts/outfit-v15-latin-600.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="assets/fonts/outfit-v15-latin-700.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="assets/fonts/young-serif-v2-latin-regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+
 		<link rel="stylesheet" href="style.css" />
 
 		<title>Frontend Mentor | Recipe page</title>
 	</head>
 	<body>
-		<main class="card">
-			<div class="img-cap">
+		<!-- Main -->
+		<main class="main">
+			<!-- Main head -->
+			<header class="main__header">
 				<img
+					class="main__image"
 					src="assets/images/image-omelette.jpeg"
-					alt="Omelette Rice"
+					alt="Freshly cooked omelette served on white plate."
+					width="1316"
+					height="600"
 				/>
-				<div class="attribution">
-					Challenge by&nbsp;<a
+				<div class="main__attribution">
+					Challenge by&nbsp;
+					<a
 						href="https://www.frontendmentor.io?ref=challenge"
 						target="_blank"
-						> Frontend Mentor</a
-					>. Coded by <a href="https://github.com/zyalwfie" target="_blank">&nbsp;wafy</a>.
+					>
+						Frontend Mentor
+					</a>
+					. Coded by
+					<a href="https://github.com/zyalwfie" target="_blank">
+						&nbsp;wafy
+					</a>
+					.
 				</div>
-			</div>
+			</header>
+			<!-- / Main head -->
 
-			<div class="content">
-				<div class="head-content">
-					<h2>Simple Omelette Recipe</h2>
-					<p>
+			<!-- Main content -->
+			<article class="card">
+				<header class="card__header">
+					<h1 class="card__title">Simple Omelette Recipe</h1>
+					<p class="card__description">
 						An easy and quick dish, perfect for any meal. This
 						classic omelette combines beaten eggs cooked to
 						perfection, optionally filled with your choice of
 						cheese, vegetables, or meats.
 					</p>
-				</div>
+				</header>
 
-				<div class="preparation-time">
-					<h4>Preparation time</h4>
-					<div class="list-item">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="5"
-							height="5"
-							fill="currentColor"
-							class="bi bi-circle-fill"
-							viewBox="0 0 16 16"
-						>
-							<circle cx="8" cy="8" r="8" />
-						</svg>
-						<div><span>Total</span>: Approximately 10 minutes</div>
-					</div>
-					<div class="list-item">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="5"
-							height="5"
-							fill="currentColor"
-							class="bi bi-circle-fill"
-							viewBox="0 0 16 16"
-						>
-							<circle cx="8" cy="8" r="8" />
-						</svg>
-						<div><span>Preparation</span>: 5 minutes</div>
-					</div>
-					<div class="list-item">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="5"
-							height="5"
-							fill="currentColor"
-							class="bi bi-circle-fill"
-							viewBox="0 0 16 16"
-						>
-							<circle cx="8" cy="8" r="8" />
-						</svg>
-						<div><span>Cooking</span>: 5 minutes</div>
-					</div>
-				</div>
+				<section class="preparation">
+					<h2 class="preparation__title">Preparation time</h2>
+					<ul class="preparation__ul">
+						<li class="preparation__list">
+							<p class="preparation__item">
+								<span>Total</span>: Approximately 10 minutes
+							</p>
+						</li>
+						<li class="preparation__list">
+							<p class="preparation__item">
+								<span>Preparation</span>: 5 minutes
+							</p>
+						</li>
+						<li class="preparation__list">
+							<p class="preparation__item">
+								<span>Cooking</span>: 5 minutes
+							</p>
+						</li>
+					</ul>
+				</section>
 
-				<div class="second-head">
-					<h3>Ingredients</h3>
-					<div class="list">
-						<div class="list-item">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="5"
-								height="5"
-								fill="currentColor"
-								class="bi bi-circle-fill"
-								viewBox="0 0 16 16"
+				<section class="ingredients">
+					<h2 class="ingredients__title">Ingredients</h2>
+					<ul class="ingredients__ul">
+						<li class="ingredients__list">
+							<span class="ingredients__item"
+								>2-3 large eggs</span
 							>
-								<circle cx="8" cy="8" r="8" />
-							</svg>
-							<span>2-3 large eggs</span>
-						</div>
-						<div class="list-item">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="5"
-								height="5"
-								fill="currentColor"
-								class="bi bi-circle-fill"
-								viewBox="0 0 16 16"
+						</li>
+						<li class="ingredients__list">
+							<span class="ingredients__item"
+								>Salt, to taste</span
 							>
-								<circle cx="8" cy="8" r="8" />
-							</svg>
-							<span>Salt, to taste</span>
-						</div>
-						<div class="list-item">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="5"
-								height="5"
-								fill="currentColor"
-								class="bi bi-circle-fill"
-								viewBox="0 0 16 16"
+						</li>
+						<li class="ingredients__list">
+							<span class="ingredients__item"
+								>Pepper, to taste</span
 							>
-								<circle cx="8" cy="8" r="8" />
-							</svg>
-							<span>Pepper, to taste</span>
-						</div>
-						<div class="list-item">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="5"
-								height="5"
-								fill="currentColor"
-								class="bi bi-circle-fill"
-								viewBox="0 0 16 16"
+						</li>
+						<li class="ingredients__list">
+							<span class="ingredients__item"
+								>1 tablespoon of butter or oil</span
 							>
-								<circle cx="8" cy="8" r="8" />
-							</svg>
-							<span>1 tablespoon of butter or oil</span>
-						</div>
-						<div class="list-item">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="5"
-								height="5"
-								fill="currentColor"
-								class="bi bi-circle-fill"
-								viewBox="0 0 16 16"
+						</li>
+						<li class="ingredients__list">
+							<span class="ingredients__item"
+								>Optional fillings: cheese, diced vegetables,
+								cooked meats, herbs</span
 							>
-								<circle cx="8" cy="8" r="8" />
-							</svg>
-							<span>
-								Optional fillings: cheese, diced vegetables,
-								cooked meats, hearbs
-							</span>
-						</div>
-					</div>
-				</div>
+						</li>
+					</ul>
+				</section>
 
 				<hr />
 
-				<div class="third-head">
-					<h3>Instructions</h3>
-					<div class="list">
-						<div class="list-item">
-							<div>1.</div>
-							<div>
+				<section class="instructions">
+					<h2 class="instructions__title">Instructions</h2>
+					<ol class="instructions__ol">
+						<li class="instructions__list">
+							<p class="instructions__item">
 								<span>Beat the eggs</span>: In a bowl, beat the
 								eggs with a pinch of salt and pepper until they
 								are well mixed. You can add a tablespoon of
 								water or milk for a fluffier texture.
-							</div>
-						</div>
-						<div class="list-item">
-							<div>2.</div>
-							<div>
+							</p>
+						</li>
+						<li class="instructions__list">
+							<p class="instructions__item">
 								<span>Heat the pan</span>: Place a non-stick
 								frying pan over medium heat and add butter or
 								oil.
-							</div>
-						</div>
-						<div class="list-item">
-							<div>3.</div>
-							<div>
+							</p>
+						</li>
+						<li class="instructions__list">
+							<p class="instructions__item">
 								<span>Cook the omelette</span>: Once the butter
 								is melted and bubbling, pour in the eggs. Tilt
 								the pan to ensure the eggs evenly coat the
 								surface.
-							</div>
-						</div>
-						<div class="list-item">
-							<div>4.</div>
-							<div>
+							</p>
+						</li>
+						<li class="instructions__list">
+							<p class="instructions__item">
 								<span>Add fillings (optional)</span>: When the
 								eggs begin to set at the edges but are still
 								slightly runny in the middle, sprinkle your
 								chosen fillings over one half of the omelette.
-							</div>
-						</div>
-						<div class="list-item">
-							<div>5.</div>
-							<div>
-								<span>Fold and serve</span>: As the omelette
-								continues to cook, carefully lift one edge and
-								fold it over the fillings. Let it cook for
-								another minute, then slide it onto a plate.
-							</div>
-						</div>
-						<div class="list-item">
-							<div>6.</div>
-							<div>
+							</p>
+						</li>
+						<li class="instructions__list">
+							<p class="instructions__item">
+								<span>Fold and serve</span>
+								: As the omelette continues to cook, carefully
+								lift one edge and fold it over the fillings. Let
+								it cook for another minute, then slide it onto a
+								plate.
+							</p>
+						</li>
+						<li class="instructions__list">
+							<p class="instructions__item">
 								<span>Enjoy</span>: Serve hot, with additional
 								salt and pepper if needed.
-							</div>
-						</div>
-					</div>
-				</div>
+							</p>
+						</li>
+					</ol>
+				</section>
 
 				<hr />
 
-				<div class="fourth-head">
-					<h3>Nutrition</h3>
-					<p>
+				<section class="nutrition">
+					<h3 class="nutrition__title">Nutrition</h3>
+					<p class="nutrition__description">
 						The table below shows nutritional values per serving
 						without the additional fillings.
 					</p>
-					<div class="table">
-						<div class="label">Calories</div>
-						<div class="value">277kcal</div>
-						<div class="label">Carbs</div>
-						<div class="value">0g</div>
-						<div class="label">Protein</div>
-						<div class="value">20g</div>
-						<div class="label fat">Fat</div>
-						<div class="value fat-value">22g</div>
-					</div>
-				</div>
-			</div>
+					<table class="nutrition__table">
+						<tr>
+							<td>Calories</td>
+							<td>227kcal</td>
+						</tr>
+						<tr>
+							<td>Carbs</td>
+							<td>0g</td>
+						</tr>
+						<tr>
+							<td>Protein</td>
+							<td>20g</td>
+						</tr>
+						<tr>
+							<td>Fat</td>
+							<td>22g</td>
+						</tr>
+					</table>
+				</section>
+			</article>
+			<!-- / Main content -->
 		</main>
+		<!-- / Main -->
 	</body>
 </html>
 
